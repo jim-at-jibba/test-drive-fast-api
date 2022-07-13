@@ -30,3 +30,8 @@
 `poetry export --no-interaction --no-ansi --without-hashes --format requirements.txt --dev --output ./fast_api/requirements.dev.txt`
 - [This was helpful](https://stackoverflow.com/questions/57331667/cant-install-dependencies-in-docker-container/57374374#57374374)
 - [Maybe try this next time](https://medium.com/@harpalsahota/dockerizing-python-poetry-applications-1aa3acb76287)
+
+## DB
+
+- `docker compose exec web-db psql -U postgres` - connect to db
+- `docker-compose exec web aerich init-db` - creates first migration with aerich
