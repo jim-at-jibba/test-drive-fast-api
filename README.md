@@ -22,3 +22,9 @@
 
 - This will set the `ENVIRONMENT` and `TESTING` variables to `prod` and `1`
 - We are caching the result of the `get_settings` using `lru_cache` with the `@lru_cache()` decorator
+
+## Docker and Poetry
+
+- Had some issues using Poetry in docker. Could not get it to install the deps.
+- Using poetry to create requirements.txt. This seems a little jank so need to do some more research,
+`poetry export --no-interaction --no-ansi --without-hashes --format requirements.txt --dev --output ./fast_api/requirements.dev.txt`
