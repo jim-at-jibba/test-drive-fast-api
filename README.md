@@ -28,3 +28,4 @@
 - Had some issues using Poetry in docker. Could not get it to install the deps.
 - Using poetry to create requirements.txt. This seems a little jank so need to do some more research,
 `poetry export --no-interaction --no-ansi --without-hashes --format requirements.txt --dev --output ./fast_api/requirements.dev.txt`
+- [This was helpful](https://stackoverflow.com/questions/57331667/cant-install-dependencies-in-docker-container/57374374#57374374)
