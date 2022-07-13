@@ -9,7 +9,7 @@ ENV PYTHONUNBUFFERED 1
 
 # install system dependencies
 RUN apt-get update \
-  && apt-get -y install netcat gcc \
+  && apt-get -y install netcat gcc postgresql \
   && apt-get clean
 
 # poetry export --no-interaction --no-ansi --without-hashes --format requirements.txt --dev --output ./fast_api/requirements.dev.txt
@@ -19,4 +19,11 @@ COPY ./requirements.dev.txt .
 RUN pip install -r requirements.dev.txt
 # add app
 COPY . .
+
+# add entrypoint
+COPY ./entrypoint.sh .
+RUN chmod +x /usr/src/app/entrypoint.sh
+
+# run entrypoint
+ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
 
