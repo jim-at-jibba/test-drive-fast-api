@@ -35,3 +35,8 @@
 
 - `docker compose exec web-db psql -U postgres` - connect to db
 - `docker-compose exec web aerich init-db` - creates first migration with aerich
+
+## Tests
+
+- `docker compose exec web python -m pytest` - run the tests
+

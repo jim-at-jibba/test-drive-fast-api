@@ -1,7 +1,7 @@
 FROM python:3.10.1-slim-buster
 
 # set working directory
-WORKDIR /usr/src/app
+WORKDIR /usr/src/code
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -22,8 +22,8 @@ COPY . .
 
 # add entrypoint
 COPY ./entrypoint.sh .
-RUN chmod +x /usr/src/app/entrypoint.sh
+RUN chmod +x /usr/src/code/entrypoint.sh
 
 # run entrypoint
-ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
+ENTRYPOINT ["/usr/src/code/entrypoint.sh"]
 
