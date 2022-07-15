@@ -1,0 +1,6 @@
+POST http://localhost:8004/summaries/
+Content-Type: application/json
+
+{
+  "url": "http://jamesbest.uk"
+}
