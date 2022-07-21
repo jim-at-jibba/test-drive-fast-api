@@ -40,7 +40,7 @@
 
 - `docker compose exec web python -m pytest` - run the tests
 
-```python
+```bash
 # normal run
 $ docker-compose exec web python -m pytest
 
@@ -75,3 +75,30 @@ $ docker-compose exec web python -m pytest -l
 $ docker-compose exec web python -m pytest --durations=2
 ```
 
+# Code quality
+
+```bash
+# FLAKE8
+# check
+docker-compose exec web flake8 .
+
+# BLACK
+# dry run
+docker-compose exec web black . --check
+
+# diff of changes
+docker-compose exec web black . --diff
+
+# do it
+docker-compose exec web black .
+
+# ISORT
+# check
+$ docker-compose exec web isort . --check-only
+
+# diff
+$ docker-compose exec web isort . --diff
+
+#do it
+$ docker-compose exec web isort .
+```
