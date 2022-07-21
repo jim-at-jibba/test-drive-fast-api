@@ -9,9 +9,7 @@ from app.config import get_settings, Settings
 
 
 def get_settings_override():
-    return Settings(
-        testing=1,
-        database_url=os.environ.get("DATABASE_TEST_URL"))
+    return Settings(testing=1, database_url=os.environ.get("DATABASE_TEST_URL"))
 
 
 @pytest.fixture(scope="module")
@@ -37,7 +35,7 @@ def test_app_with_db():
         db_url=os.environ.get("DATABASE_TEST_URL"),
         modules={"models": ["app.models.tortoise"]},
         generate_schemas=True,
-        add_exception_handlers=True
+        add_exception_handlers=True,
     )
     with TestClient(app) as test_client:
 

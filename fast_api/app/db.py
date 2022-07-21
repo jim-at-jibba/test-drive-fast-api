@@ -29,6 +29,7 @@ def init_db(app: FastAPI) -> None:
         add_exception_handlers=True,
     )
 
+
 # Rather than applying the migrations via Aerich, which can be slow,
 # there may be times where you just want to apply the schema to the
 # database in its final state.
@@ -38,8 +39,7 @@ async def generate_schema() -> None:
     log.info("Initialising tortoise")
 
     await Tortoise.init(
-        db_url=os.environ.get("DATABASE_URL"),
-        modules={"models": ["models.tortoise"]}
+        db_url=os.environ.get("DATABASE_URL"), modules={"models": ["models.tortoise"]}
     )
     log.info("Generating database schema via Tortoise...")
     await Tortoise.generate_schemas()
