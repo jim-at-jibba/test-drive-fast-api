@@ -8,6 +8,7 @@ from app.models.tortoise import SummarySchema
 
 router = APIRouter()
 
+
 @router.post("/", response_model=SummaryPayloadResponse, status_code=201)
 async def create_summary(payload: SummaryPayloadSchema) -> SummaryPayloadSchema:
     summary_id = await crud.post(payload)

@@ -1,7 +1,5 @@
 import json
 
-import pytest
-
 # test_app_with_db is a fixture
 
 

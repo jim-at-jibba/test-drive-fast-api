@@ -10,6 +10,7 @@ from pydantic import BaseSettings, AnyUrl
 
 log = logging.getLogger("uvicorn")
 
+
 class Settings(BaseSettings):
     environment: str = os.getenv("ENVIRONMENT", "dev")
     testing: bool = os.getenv("TESTING", False)
@@ -20,4 +21,3 @@ class Settings(BaseSettings):
 def get_settings() -> BaseSettings:
     log.info("loading config settings from the environment...")
     return Settings()
-
