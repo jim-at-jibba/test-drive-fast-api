@@ -1,5 +1,7 @@
 # Fast api tut
 
+![Continuous Integration and Delivery](https://github.com/jim-at-jibba/test-drive-fast-api/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=main)
+
 [Testdriven - FastAPI and docker](https://testdriven.io/courses/tdd-fastapi/)
 
 ## Peotry
