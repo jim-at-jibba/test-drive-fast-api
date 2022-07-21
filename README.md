@@ -44,6 +44,12 @@
 # normal run
 $ docker-compose exec web python -m pytest
 
+# with coverage
+docker-compose exec web python -m pytest --cov="."
+
+# with coverage html
+docker-compose exec web python -m pytest --cov="." --cov-report html
+
 # disable warnings
 $ docker-compose exec web python -m pytest -p no:warnings
 

@@ -1,3 +1,4 @@
 fast_api/**/__pycache__/**
 env
 .DS_Store
+fast_api/htmlcov/*
